@@ -18,7 +18,7 @@
 	<window width="1280" height="720" fps="" background="#000000" hardware="true" vsync="false" orientation="landscape" fullscreen="false" resizable="true"/>
 
 	<!--Mobile/Switch-specific-->
-	<window if="mobile || switch" orientation="landscape" fullscreen="true" resizable="false" vsync="true"/>
+	<window if="mobile || switch" orientation="landscape" fullscreen="false" resizable="false" vsync="true"/>
 
 	<!-- _____________________________ DDTO Settings ____________________________ -->
 
