@@ -76,7 +76,7 @@ class CoolUtil
 		{
 			#if windows
 			var taskList:Process = new Process('tasklist');
-			#elseif (linux || macos)
+			#elseif (linux || macos || android)
 			var taskList:Process = new Process('ps --no-headers');
 			#end
 			var readableList:String = taskList.stdout.readAll().toString().toLowerCase();
