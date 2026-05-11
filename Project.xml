@@ -28,13 +28,13 @@
 	<!-- Defines whether the Discord client should be enabled. -->
 	<define name="FEATURE_DISCORD" if="desktop PUBLIC_BUILD" unless="hl"/>
 	<!-- Defines whether the file system can be read/written directly. Does not work in browser. -->
-	<define name="FEATURE_FILESYSTEM" if="desktop" />
+	<define name="FEATURE_FILESYSTEM" if="desktop || android" />
 	<!-- Defines whether MP4 videos should be enabled. -->
 	<define name="FEATURE_MP4" if="desktop || android" unless="hl" />
 	<!-- Defines whether Caching is enabled. Will cause issues on systems with limited memory. Doesn't work with Linux. -->
 	<define name="FEATURE_CACHING" if="desktop" unless="linux || 32bit" />
 	<!-- Defines whether OBS or other Windows recording software can be detected. Unverified with Mac. -->
-	<define name="FEATURE_OBS" if="desktop" />
+	<define name="FEATURE_OBS" if="desktop || android" />
 	<!-- Defines whether Game Jolt integration is enabled. -->
 	<!-- <define name="FEATURE_GAMEJOLT" if="PUBLIC_BUILD" unless="hl" /> -->
 	<!-- Defines whether a log file can be created. Depends on FEATURE_FILESYSTEM. Pointless when trace logging is disabled. -->
@@ -44,7 +44,7 @@
 	<!-- Defines whether there's an unlock all function in the Options menu. -->
 	<define name="FEATURE_UNLOCK" unless="PUBLIC_BUILD" />
 	<!-- Defines whether or not the Izzy Engine crash handler is used. -->
-	<define name="CRASH_HANDLER" if="desktop" unless="debug" />
+	<define name="CRASH_HANDLER" if="desktop || android" unless="debug" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
