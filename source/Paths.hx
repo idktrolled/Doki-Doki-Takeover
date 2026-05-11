@@ -368,8 +368,6 @@ class Paths
 		if (!currentTrackedSounds.exists(gottenPath))
 		{
 			if (OpenFlAssets.exists(getPath('$path/$key.$SOUND_EXT', SOUND, library)))
-				currentTrackedSounds.set(gottenPath, OpenFlAssets.getSound(getPath('$path/$key.$SOUND_EXT', SOUND, library)));
-			else
 				currentTrackedSounds.set(gottenPath, Sound.fromFile(gottenPath));
 		}
 
